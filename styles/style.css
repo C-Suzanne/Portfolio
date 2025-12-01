@@ -1,0 +1,267 @@
+body{
+    width: 100%;
+    height:100vh;
+    background-color: black;
+    color:white;
+    overflow-x: hidden;
+}
+
+
+
+nav .nav-link {
+    margin: 0 20px;
+    font-weight: 550;
+
+}
+
+nav .nav-link.active{
+    color: pink !important;
+    border-bottom: 3px solid pink;
+}
+
+nav .nav-link:hover{
+    color: pink;
+    border-bottom: 3px solid pink;
+}
+
+
+.dark-mode {
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.dark-mode:hover {
+    transform: scale(1.1);
+}
+
+
+.bi-moon-stars-fill {
+    color: white;
+}
+
+.bi-sun-fill {
+    color: #ffd700;
+}
+
+body.light-mode .bi-sun-fill {
+    color: #ff6b00;
+}
+
+
+
+footer a{
+    outline: none;
+    text-decoration: none;
+}
+
+footer a:hover {
+    border-bottom: 1px solid;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size:3.5rem;
+    font-weight: 700;
+    line-height: 1.3; 
+}
+
+span{
+    color:pink;
+    text-shadow: 0 0 10px rgb(237, 137, 154);
+} 
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position:relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow:0 0 25px ;
+    cursor:pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size:1.8rem;
+    font-weight:500;
+}
+
+
+.text-ecrit span{
+    position: relative;
+}
+
+.text-ecrit span::before{
+    content:" ETUDIANTE L2";
+    color:pink;
+    text-shadow: 0 0 10px rgb(237, 137, 154);
+    animation:words 20s infinite;
+}
+s
+.text-ecrit span::after{
+    content:"";
+    background-color: black;
+    position:absolute;
+    width:calc(100% +8px);
+    height:100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid pink
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "A LA RECHERCHE D'UN STAGE"
+    }
+}
+
+
+.tabs-navigation .nav-pills .nav-link {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid pink;
+    border-radius: 25px;
+    padding: 12px 25px;
+    margin: 0 5px;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.tabs-navigation .nav-pills .nav-link:hover {
+    background-color: rgba(255, 107, 157, 0.2);
+    color: white;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.tabs-navigation .nav-pills .nav-link.active {
+    background-color: pink;
+    color: black !important;
+    border-color: pink;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+}
+
+.light-mode-tab {
+    color: black !important;
+    background-color: white ;
+    border: 2px solid pink;
+}
+
+.light-mode-tab:hover {
+    background-color: rgba(255, 107, 157, 0.2) ;
+    color: black ;
+}
+
+.light-mode-tab.active {
+    background-color: pink ;
+    color: black ;
+    border-color: pink ;
+    font-weight: bold ;
+    box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+}
+
+.timeline li{
+    background-color: rgba(255, 192, 203, 0.705);
+    border-radius: 25px;
+    margin-top: 1rem;
+    padding: 1.5rem 2rem;
+    display: grid;
+    gap:1rem;
+}
+
+figure:hover{
+    transform: scale(1.15);
+    transition: 0.3s ease;
+}
+
+.btn-contact{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid pink;
+    padding: 12px 25px;
+    margin: 0 5px;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-contact:hover {
+    background-color: rgba(255, 107, 157, 0.2);
+    color: white;
+    border-color: pink;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.social-media i {
+    color: pink ;
+    font-size: 3rem;
+}
+
+.social-media i:hover{
+    color: rgba(255, 107, 157, 0.2);
+    border-color: pink;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.formulaire{
+    background: linear-gradient(135deg, pink 0%, #b082db 100%);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(255,105,180,0.2);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.formulaire::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.form-control {
+    background-color: rgba(255,255,255,0.95);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(138,43,226,0.1);
+}
+
+.form-control:focus {
+    background-color: white;
+    border-color: #ff1493;
+    box-shadow: 0 5px 20px rgba(255,20,147,0.3);
+    transform: translateY(-2px);
+}
