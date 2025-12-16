@@ -2,11 +2,11 @@ AOS.init();
 
 //Vérifier le mode sauvegardé au chargement de la page
 document.addEventListener("DOMContentLoaded", function() {
-    const savedMode = localStorage.getItem("theme");
+    const mode = localStorage.getItem("theme");
     const body = document.querySelector("body");
     const darkModeIcon = document.querySelector(".dark-mode i");
     
-    if (savedMode === "light"){
+    if (mode === "light"){
         //Appliquer le mode clair
         body.classList.add("light-mode");
         darkModeIcon.classList.remove("bi-moon-stars-fill");
@@ -105,7 +105,7 @@ form.addEventListener("submit", function(event) {
             document.getElementById("sujet").value = "";
             document.getElementById("message").value = "";
             
-            // Réinitialiser le bouton
+            //Réinitialiser le bouton
             bouton.textContent = texteOriginal;
             bouton.disabled = false;
         })
